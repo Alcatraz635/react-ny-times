@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=News+Cycle');
+
+html {
+    font-size  : 1em;
+    padding    : 0;
+    margin     : 0;
+    color      : #141414;
+    line-height: 115%;
+    font-weight: 900;
+    font-family: 'News Cycle', sans-serif;
+}
+
+body {
+    background-color: white;
+    margin          : 0 !important;
+}
+
+p {
+    line-height  : 115%;
+    margin-bottom: 1.3em;
+    font-family: 'News Cycle', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin     : 1.414em 0 .5em;
+    font-weight: inherit;
+    font-size  : 6.854em;
+    line-height: 115%;
+font-family: 'News Cycle', sans-serif;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 4.236em;
+}
+
+h3 {
+    font-size: 2.618em;
+}
+
+h4 {
+    font-size: 1.618em;
+}
+font-size: 2.618em;
+
+.font_small,
+small {
+    font-size: .618em;
+}
+
+a {
+    color     : #F1684E;
+    transition: all .3s ease-in-out;
+}
+
+a:hover {
+    color          : white;
+    text-decoration: none;
+}
