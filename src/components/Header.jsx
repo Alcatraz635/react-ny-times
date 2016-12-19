@@ -4,14 +4,14 @@ import {RaisedButton} from 'material-ui'
 import darkBaseTheme from 'material-ui/styles/baseThemes/darkBaseTheme'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import {DatePicker} from 'material-ui'
 import '../styles/Header.css'
 
 
 export default class Header extends Component {
-   constructor(props){
-      super(props)
-      
-   }
+  handleChange (e, date){
+    console.log(e, date);
+  };
    render(){
      return(
        <div className="header-section">
@@ -25,7 +25,14 @@ export default class Header extends Component {
                   onTouchTap={() => this.props.openDrawer()}/>
             </MuiThemeProvider>
             </Col>
-            <Col sm={4} xs={12}></Col>
+            <Col sm={4} xs={12}>
+              <MuiThemeProvider muiTheme={getMuiTheme(darkBaseTheme)}>
+                 <DatePicker
+                   hintText="FILTER BY DATE"
+                   onChange={this.handleChange}
+                 />
+              </MuiThemeProvider>
+            </Col>
             <Col sm={4} xs={12}></Col>
          </Row>
        </div>

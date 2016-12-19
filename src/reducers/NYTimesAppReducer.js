@@ -2,6 +2,8 @@ import {
     SELECT_CATEGORY,
     INVALIDATE_CATEGORY,
     REQUEST_ARTICLES,
+    FILTER_DATE,
+    FILTER_CLEAR,
     RECEIVE_ARTICLES,
     CLOSE_DRAWER,
     OPEN_DRAWER,
@@ -65,7 +67,7 @@ export function toggleDrawer( state = false, action ) {
     }
 }
 
-export function sectionItems(state =
+export function categoryItems(state =
     [
         'home',
         'opinion',
@@ -96,4 +98,19 @@ export function sectionItems(state =
     ]
 ) {
     return state
+}
+
+export function dateFilteredArticles( state = {}, action){
+  console.log(action);
+  switch(action.type){
+  case FILTER_DATE:
+      console.log(action);
+      return Object.assign({}, state, {
+          filteredArticles: action.articles
+      })
+  case FILTER_CLEAR:
+      return state
+  default:
+      return state
+      }
 }
