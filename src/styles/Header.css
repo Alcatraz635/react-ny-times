@@ -1,0 +1,7 @@
+.header-section h2 {
+    margin-top: 15px;
+}
+.header-section {
+    background: rgba(0,0,0,0.7);
+    padding: 5px 0px 10px 0px;
+}

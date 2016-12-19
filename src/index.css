@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=News+Cycle');
+@import url( 'https://fonts.googleapis.com/css?family=News+Cycle');
 
 html {
-    font-size  : 1em;
-    padding    : 0;
-    margin     : 0;
-    color      : #141414;
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    color: white;
     line-height: 115%;
     font-weight: 900;
     font-family: 'News Cycle', sans-serif;
@@ -12,11 +12,17 @@ html {
 
 body {
     background-color: white;
-    margin          : 0 !important;
+    margin: 0 !important;
+    background: url('./images/bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
 }
 
 p {
-    line-height  : 115%;
+    line-height: 115%;
     margin-bottom: 1.3em;
     font-family: 'News Cycle', sans-serif;
 }
@@ -27,11 +33,11 @@ h3,
 h4,
 h5,
 h6 {
-    margin     : 1.414em 0 .5em;
+    margin: 1.414em 0 .5em;
     font-weight: inherit;
-    font-size  : 6.854em;
+    font-size: 6.854em;
     line-height: 115%;
-font-family: 'News Cycle', sans-serif;
+    font-family: 'News Cycle', sans-serif;
 }
 
 h1 {
@@ -57,11 +63,11 @@ small {
 }
 
 a {
-    color     : #F1684E;
+    color: #F1684E;
     transition: all .3s ease-in-out;
 }
 
 a:hover {
-    color          : white;
+    color: white;
     text-decoration: none;
 }
