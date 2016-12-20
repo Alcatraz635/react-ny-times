@@ -1,4 +1,5 @@
-.header-section h2 {
+.header-section h2,
+.header-section h4 {
   color: white;
   margin-top: 15px;
 }

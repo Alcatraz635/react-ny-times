@@ -2,8 +2,8 @@ import {
     SELECT_CATEGORY,
     INVALIDATE_CATEGORY,
     REQUEST_ARTICLES,
+    SORT,
     FILTER_DATE,
-    FILTER_CLEAR,
     RECEIVE_ARTICLES,
     CLOSE_DRAWER,
     OPEN_DRAWER,
@@ -104,9 +104,17 @@ export function selectedFilterDate( state = null, action){
   switch(action.type){
   case FILTER_DATE:
       return action.date
-  case FILTER_CLEAR:
-      return null
   default:
       return state
       }
+}
+
+export function selectedSortBy( state= "published_date", action){
+  switch (action.type) {
+    case SORT:
+      return action.sortBy
+    default:
+      return state
+
+  }
 }

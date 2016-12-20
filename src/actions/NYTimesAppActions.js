@@ -1,6 +1,8 @@
 import fetch from 'isomorphic-fetch'
+
 export const SELECT_CATEGORY = 'SELECT_CATEGORY'
 export const FILTER_DATE = 'FILTER_DATE'
+export const SORT = 'SORT'
 export const INVALIDATE_CATEGORY = 'INVALIDATE_CATEGORY'
 export const REQUEST_ARTICLES = 'REQUEST_ARTICLES'
 export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES'
@@ -69,6 +71,9 @@ export function openDrawer( ) {
 }
 
 export function selectFilterDate( date ) {
-  console.log(date);
   return { type: FILTER_DATE, date: date }
+}
+
+export function selectSortBy ( sortBy ) {
+  return { type: SORT, sortBy: sortBy}
 }
