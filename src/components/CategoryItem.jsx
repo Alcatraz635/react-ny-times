@@ -12,6 +12,7 @@ export default class CategoryItem extends Component{
         {...isActiveCategory ? { className:"active-section-item" } : { className:"section-item" } }
         onTouchTap={()=>{
         this.props.closeDrawer()
+        this.props.selectFilterDate(null)
         this.props.selectedCategory(this.props.item)
         this.props.fetchArticlesIfNeeded(this.props.item)
       }}>

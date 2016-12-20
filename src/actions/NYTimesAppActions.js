@@ -1,8 +1,6 @@
 import fetch from 'isomorphic-fetch'
-
 export const SELECT_CATEGORY = 'SELECT_CATEGORY'
 export const FILTER_DATE = 'FILTER_DATE'
-export const FILTER_CLEAR = 'FILTER_CLEAR'
 export const INVALIDATE_CATEGORY = 'INVALIDATE_CATEGORY'
 export const REQUEST_ARTICLES = 'REQUEST_ARTICLES'
 export const RECEIVE_ARTICLES = 'RECEIVE_ARTICLES'
@@ -43,7 +41,7 @@ export function fetchArticles( category, apiKey = '73e6f1e508994f288d5df6548e902
 }
 
 function shouldFetchPosts( state, category ) {
-  const articles = state.articles[category]
+  const articles = state.articlesByCategory[category]
   if ( !articles ) {
     return true
   } else if ( category.isFetching ) {
@@ -70,15 +68,7 @@ export function openDrawer( ) {
   return { type: OPEN_DRAWER }
 }
 
-export function filterByDate( date) {
+export function selectFilterDate( date ) {
   console.log(date);
-    return ( dispatch, getState ) => {
-      return { type: FILTER_DATE, articles: getState().articles[getState().selectedCategory], date: date }
-    }
-}
-
-export function filterClear( ) {
-    return ( dispatch, getState ) => {
-      return { type: FILTER_CLEAR }
-    }
+  return { type: FILTER_DATE, date: date }
 }

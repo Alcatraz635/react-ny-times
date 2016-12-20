@@ -100,16 +100,12 @@ export function categoryItems(state =
     return state
 }
 
-export function dateFilteredArticles( state = {}, action){
-  console.log(action);
+export function selectedFilterDate( state = null, action){
   switch(action.type){
   case FILTER_DATE:
-      console.log(action);
-      return Object.assign({}, state, {
-          filteredArticles: action.articles
-      })
+      return action.date
   case FILTER_CLEAR:
-      return state
+      return null
   default:
       return state
       }

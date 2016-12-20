@@ -5,13 +5,12 @@ import { combineReducers, createStore, applyMiddleware, } from 'redux'
 import { Provider } from 'react-redux'
 import thunkMiddleware from 'redux-thunk'
 import devToolsEnhancer from 'remote-redux-devtools';
-import {selectedCategory, articlesByCategory,dateFilteredArticles, toggleDrawer, categoryItems} from './reducers/NYTimesAppReducer.js'
+import {selectedCategory, articlesByCategory, selectedFilterDate, toggleDrawer, categoryItems} from './reducers/NYTimesAppReducer.js'
 import './index.css';
 
+const rootReducer = combineReducers({ selectedCategory: selectedCategory, articlesByCategory, selectedFilterDate, drawerIsOpen:toggleDrawer, categoryItems:categoryItems})
 
-const rootReducer = combineReducers({ selectedCategory: selectedCategory, articles: articlesByCategory,filteredArticles: dateFilteredArticles, drawerIsOpen:toggleDrawer, categoryItems:categoryItems})
-
-const store = createStore(rootReducer, devToolsEnhancer( ), applyMiddleware(  thunkMiddleware ))
+const store = createStore(rootReducer, devToolsEnhancer( ), applyMiddleware( thunkMiddleware ))
 
 
 ReactDOM.render(
