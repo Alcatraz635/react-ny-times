@@ -37,7 +37,7 @@ export default class Article extends Component {
                         {this.props.article.abstract}
                     </CardText>
                     <CardActions>
-                        <a href={this.props.article.short_url}><FlatButton label="Full Article" target="_blank"/></a>
+                        <a href={this.props.article.short_url} target="_blank"><FlatButton label="Full Article" /></a>
                     </CardActions>
                 </Card>
                 </MuiThemeProvider>
