@@ -15,5 +15,5 @@ const store = createStore(rootReducer, devToolsEnhancer( ), applyMiddleware( thu
 
 ReactDOM.render(
   <Provider store={store}>
-   <NYTimesApp/>
+   <NYTimesApp />
  </Provider>, document.getElementById( 'root' ));

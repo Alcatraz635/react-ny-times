@@ -25,6 +25,21 @@ export function receiveArticles( json, category ) {
   return {type: RECEIVE_ARTICLES, category, articles: json.results, receivedAt: Date.now( )}
 }
 
+export function closeDrawer( ) {
+  return { type: CLOSE_DRAWER }
+}
+export function openDrawer( ) {
+  return { type: OPEN_DRAWER }
+}
+
+export function selectFilterDate( date ) {
+  return { type: FILTER_DATE, date: date }
+}
+
+export function selectSortBy ( sortBy ) {
+  return { type: SORT, sortBy: sortBy}
+}
+
 export function fetchArticles( category, apiKey = '73e6f1e508994f288d5df6548e902fda' ) {
   return dispatch => {
     dispatch(requestStories( category ))
@@ -61,19 +76,4 @@ export function fetchArticlesIfNeeded( category ) {
       return Promise.resolve( )
     }
   }
-}
-
-export function closeDrawer( ) {
-  return { type: CLOSE_DRAWER }
-}
-export function openDrawer( ) {
-  return { type: OPEN_DRAWER }
-}
-
-export function selectFilterDate( date ) {
-  return { type: FILTER_DATE, date: date }
-}
-
-export function selectSortBy ( sortBy ) {
-  return { type: SORT, sortBy: sortBy}
 }
